@@ -1,0 +1,51 @@
+name: MTeleporter
+main: me.andavin.mteleporter.MTeleporter
+depend: [ Vault ]
+version: 1.0
+commands:
+   mt:
+     usage: /<command> [check] <x> <y> <z>
+     description: Teleports the player for money per block.
+     aliases: [ mteleport, mtelepoter, mtel ]
+   mta:
+     usage: /<command> [check] <player>
+     description: Requests teleportation to a player.
+     aliases: [ mteleportask, mteleporterask, mtask ]
+   mtaccept:
+     usage: /<command>
+     description: Accepts a player’s request.
+     aliases: [ maccept, myes ]
+   mtdeny:
+     usage: /<command>
+     description: Denies a player’s request.
+     aliases: [ mdeny, mno ]
+   mwarp:
+     usage: /<command> <mwarpname>
+     description: Teleports to an MWarp or gives a list of MWarps.
+     aliases: [ moneywarp ]
+   setmwarp:
+     usage: /<command> <mwarpname>
+     description: Sets an MWarp.
+     aliases: [ newmwarp ]
+   delmwarp:
+     usage: /<command> <mwarpname>
+     description: Deletes an MWarp.
+     aliases: [ deletemwarp ]
+
+permissions:
+   mt.teleporter:
+     description: Allows use of the /mt command.
+   mt.ask:
+     description: Allows use of the /mta, /mtaccept and /mtdeny commands.
+   mt.mwarp:
+     description: Allows use of MWarps.
+     children:
+     - mt.mwarp.use
+     - mt.mwarp.create
+     - mt.mwarp.delete
+   mt.mwarp.use:
+     description: Allows a player to use MWarps.
+   mt.mwarp.create:
+     description: Allows a player to create MWarps.
+   mt.mwarp.delete:
+     description: Allows a player to delete MWarps.

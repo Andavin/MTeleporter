@@ -1,0 +1,27 @@
+############################################
+# +--------------------------------------+ #
+# |              MTeleporter             | #
+# +--------------------------------------+ #
+############################################
+
+# What symbol would you like to use to represent your currency? Examples: $ £
+economy_symbol: $
+
+# What would you like the teleport delay to be for MTeleports?
+# There will be no delay if this is set to 0 or below.
+tp_delay: 0
+
+# How much do you want to charge people per block they teleport?
+price_per_block: 1.5
+
+# How much do you want to charge for setting an MWarp?
+setmwarp_price: 200
+
+# How much do you want to charge every time someone uses an MWarp?
+mwarp_price: 1000
+
+# What worlds do you want people to be able to use the money teleporter in?
+enabled_worlds:
+- world
+- world_nether
+- world_the_end
